@@ -7,14 +7,13 @@ Remotely monitor greenhouse sensors and control heat, water flow, and cooling us
 * Low Sump Tank Level
 * Return flow to fish tank
 * Fish Tank Temp (F)
-* Ambient Ligh Sensor
+* Ambient Light Sensor
 * Humidity
-* Temperture (F)
+* Temperature (F)
 * AC Feed Monitor
 * VCC Backup Battery Monitor
 * Solar Generation
 
 **Control**
 
-* Exhauast Fan On/Off
-
+* Exhaust Fan On/Off
