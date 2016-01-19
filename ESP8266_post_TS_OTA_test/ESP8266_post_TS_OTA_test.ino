@@ -149,10 +149,102 @@ void setWordOK() {
 }
 
 //TODO add function to convert test to char byte and process one char at a time.
-void setWordPostLED () {
-  
-}
+void setWordPostLED (char words[]) {
 
+for (int i = 0; i < sizeof(words) - 1; i++){
+  char xchar;
+
+//TODO chars to array 
+ 
+//TODO Get Chars, while more chars
+
+//TODO process enums for each char
+  
+ switch(words[i]) {
+   case 'a':
+     setDit();  setDah();
+     break;
+   case 'b':
+     setDah(); setDit(); setDit(); setDit();
+     break;
+   case 'c':
+     setDah(); setDit(); setDah(); setDit();
+     break;
+   case 'd':
+     setDah(); setDit(); setDit();
+     break;
+   case 'e':
+     setDit();
+     break;
+   case 'f':
+     setDit(); setDit(); setDah(); setDit();
+     break;
+   case 'g':
+     setDah(); setDah(); setDit();
+     break;
+   case 'h':
+     setDit(); setDit(); setDit(); setDit();
+     break;
+   case 'i':
+   break;
+   case 'j':
+   break;
+   case 'k':
+   break;
+   case 'l':
+   break;
+   case 'm':
+   break;
+   case 'n':
+   break;
+   case 'o':
+   break;
+   case 'p':
+   break;
+   case 'q':
+   break;
+   case 'r':
+   break;
+   case 's':
+   break;
+   case 't':
+   break;
+   case 'u':
+   break;
+   case 'v':
+   break;
+   case 'w':
+   break;
+   case 'x':
+   break;
+   case 'y':
+   break;
+   case 'z':
+   break;
+   case 1:
+   break;
+   case 2:
+   break;
+   case 3:
+   break;
+   case 4:
+   break;
+   case 5:
+   break;
+   case 6:
+   break;
+   case 7:
+   break;
+   case 8:
+   break;
+   case 9:
+   break;
+   case 0:
+   break;
+ }
+} 
+ }
+  
 void buildUrlString() {
   Serial.println("Building url for ThingSpeak server.");
   thingSpeakURL = "/update?api_key=";
