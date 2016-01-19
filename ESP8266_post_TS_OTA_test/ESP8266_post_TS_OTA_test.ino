@@ -99,6 +99,54 @@ void getDht() {
   Serial.println("Successful exit DHT Sensor!");
 }
 
+void setDah() {
+  digitalWrite(postled, 1);
+  digitalWrite(postled, 0);
+  delay(700);
+  digitalWrite(postled, 1);
+  delay(300);
+  }
+
+void setDit() {
+  digitalWrite(postled, 1);
+  digitalWrite(postled, 0);
+  delay(300);
+  digitalWrite(postled, 1);
+  delay(300);
+  return;
+  }
+
+void setCharSpace(){
+  digitalWrite(postled, 1);
+  delay(700);
+  return;
+}
+
+void setWordSpace(){
+  digitalWrite(postled, 1);
+  delay(1400);
+  return;
+}
+
+void setWordOK() {
+  //display K in CW
+  //setup postled
+  //display OK in CW
+  delay(2000);
+  //display "O"
+  setDah();
+  setDah();
+  setDah();
+  setCharSpace();
+  //display "K"
+  setDah();
+  setDit();
+  setDah();
+  digitalWrite(postled, 1);
+  return;
+   
+}
+
 void buildUrlString() {
   Serial.println("Building url for ThingSpeak server.");
   thingSpeakURL = "/update?api_key=";
@@ -142,6 +190,7 @@ void postThingServer() {
          
    }//close if client.connect
 digitalWrite(postled, 1 );
+setWordOK();
 }//close function postThingServer
 
 void handleRoot() {
@@ -203,6 +252,10 @@ void setup(void){
  
    server.on("/", [](){
     handleRoot();
+  });
+
+  server.on("/setWordOK", [](){
+    setWordOK();
   });
 
   server.on("/temp", [](){
@@ -267,7 +320,7 @@ void setup(void){
   
    //seperate http url call to ../online
    server.on("/help", [](){
-    server.send(200, "text/plain", "Available cmds are:  /; /temp; /getvcc; /getdht; /getstatus; /postts; /restart; /help");
+    server.send(200, "text/plain", "Available cmds are:  /; /temp; /getvcc; /getdht; /getstatus; /postts; /setWordOk; /restart; /help");
   });
 
    server.on("/restart", [](){
@@ -289,6 +342,7 @@ void setup(void){
   });
   ArduinoOTA.onEnd([]() {
     Serial.println("End ArduioOTA.onStart Function!");
+    //setWordOK();
   });
   ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
     Serial.printf("Progress: %u%%\n", (progress / (total / 100)));
@@ -303,9 +357,9 @@ void setup(void){
   });
   
   ArduinoOTA.begin();
-  Serial.println("Ready");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
+  //Serial.println("Ready");
+  //Serial.print("IP address: ");
+  //Serial.println(WiFi.localIP());
 
 //ArduinoOTA Code end here...
   
