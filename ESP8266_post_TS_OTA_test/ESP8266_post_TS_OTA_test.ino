@@ -68,7 +68,6 @@ void getUptime() {
   Serial.println();
 }
 
-
 void getMem() {
   Serial.println("Free Heap: " + String(ESP.getFreeHeap()));
   Serial.println("Flash Chip Size: " + String(ESP.getFlashChipSize()));
@@ -147,6 +146,11 @@ void setWordOK() {
   digitalWrite(postled, 1);
   return;
    
+}
+
+//TODO add function to convert test to char byte and process one char at a time.
+void setWordPostLED () {
+  
 }
 
 void buildUrlString() {
