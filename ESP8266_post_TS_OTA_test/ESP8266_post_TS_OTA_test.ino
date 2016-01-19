@@ -27,6 +27,7 @@ char api_key[] = "SNS7JHC9YZTLH37W";
 String thingSpeakURL;
 
 const int led = 13;
+//status led for feedback
 const int postled = 12;
 ADC_MODE(ADC_VCC);
 
