@@ -15,7 +15,8 @@ DHT dht(DHTPIN, DHTTYPE);
 const char* ssid = "homertr249";
 const char* password = "shinyjade645";
 int x =0;
-
+//set webserver to http
+//https svc causes memory issues, avoid for now
 ESP8266WebServer server(80);
 
 //IPAddress server(74,125,232,128);  
