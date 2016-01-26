@@ -186,41 +186,59 @@ for (int i = 0; i < sizeof(words) - 1; i++){
      setDit(); setDit(); setDit(); setDit();
      break;
    case 'i':
-   break;
+     setDit(); setDit();
+     break;
    case 'j':
-   break;
+     setDit(); setDah(); setDah(); setDah();
+     break;
    case 'k':
-   break;
+     setDah(); setDit(); setDah();
+     break;
    case 'l':
-   break;
+     setDit(); setDit(); setDah(); setDit();
+     break;
    case 'm':
-   break;
+     setDah(); setDah();
+     break;
    case 'n':
-   break;
+     setDah(); setDit();
+     break;
    case 'o':
-   break;
+     setDah(); setDah(); setDah();
+     break;
    case 'p':
-   break;
+     setDit(); setDah(); setDah(); setDit();
+     break;
    case 'q':
-   break;
+     setDah(); setDah(); setDit(); setDah();
+     break;
    case 'r':
-   break;
+     setDit(); setDah(); setDit();
+     break;
    case 's':
-   break;
+     setDit(); setDit(); setDit();
+     break;
    case 't':
-   break;
+     setDah();
+     break;
    case 'u':
-   break;
-   case 'v':
-   break;
+     setDit(); setDit(); setDah();
+     break;
+   case 'v': 
+     setDit(); setDit(); setDit(); setDah();
+     break;
    case 'w':
-   break;
+     setDit(); setDit(); setDah();
+     break;
    case 'x':
-   break;
+     setDah(); setDit(); setDit(); setDah();
+     break;
    case 'y':
-   break;
+     setDit(); setDit(); setDah(); setDit();
+     break;
    case 'z':
-   break;
+     setDah(); setDah(); setDit(); setDit();
+     break;
    case 1:
    break;
    case 2:
